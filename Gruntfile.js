@@ -34,16 +34,6 @@ module.exports = function(grunt) {
       options: {
         dir: 'dist',
       },
-      testbranch: {
-        options: {
-          branch: 'test-branch',
-          remote: '../',
-          commit: true,
-          push: true,
-          connectCommits: false,
-          tag: pkg.version
-        }
-      },
       production: {
         options: {
           branch: 'prod',
@@ -56,8 +46,10 @@ module.exports = function(grunt) {
     },
 
     // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js'],
+    mochaTest: {
+			test: {
+				src: ['test/tests.js']
+			}
     }
   });
 
@@ -68,13 +60,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', [
     'clean',
-    'buildcontrol',
-    'nodeunit'
+    'mochaTest'
   ]);
 
   // By default, lint and run all tests.
