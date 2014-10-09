@@ -26,7 +26,9 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/scenarios/*/{remote,verify}']
+      tests: [
+				'test/mock-repo'
+      ]
     },
 
     // Configuration to be run (and then tested).
