@@ -81,7 +81,7 @@ var execScenario = function (scenario, cb) {
 describe('build control tests', function () {
 
 	it('should do a basic deployment', function (done) {
-		execScenario('basic_deploy', function (err, stdout, stderr) {
+		execScenario('basic_deploy', function (err, results) {
 			fs.existsSync('verify/empty_file').should.be.true;
 			done();
 		});
