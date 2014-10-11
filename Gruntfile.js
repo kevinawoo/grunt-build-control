@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     // Before generating any new files, remove any previously-created files.
     clean: {
       tests: [
-				'test/mock-repo'
+      'test/mock-repo'
       ]
     },
 
@@ -49,9 +49,9 @@ module.exports = function(grunt) {
 
     // Unit tests.
     mochaTest: {
-			test: {
-				src: ['test/tests.js']
-			}
+      test: {
+        src: ['test/tests.js']
+      }
     }
   });
 

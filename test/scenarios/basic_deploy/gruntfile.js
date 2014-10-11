@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
   // add custom tasks
-  // NOTE: cwd is `test/mock-repo`
-  grunt.loadTasks('../../tasks');
+  grunt.loadTasks('../../../tasks');
 
 
   // test config
@@ -14,8 +13,9 @@ module.exports = function (grunt) {
       testing: {
         options: {
           branch: 'master',
-          commit: 'This is a commit',
-          push: true
+          commit: true,
+          push: true,
+          connectCommits: false
         }
       }
     }
