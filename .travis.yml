@@ -1,6 +1,6 @@
 language: node_js
 before_install:
-	- sudo apt-get install git
+  - sudo apt-get install git
 node_js:
   - "0.11"
   - "0.10"
