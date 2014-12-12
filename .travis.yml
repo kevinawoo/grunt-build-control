@@ -4,7 +4,7 @@ before_install:
   - git config user.email "you@example.com"
   - git config user.name "Your Name"
 node_js:
-  - "0.11"
+#  - "0.11"
   - "0.10"
-  - "0.8"
-  - "0.6"
+# - "0.8"
+# - "0.6"
